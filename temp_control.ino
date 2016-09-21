@@ -22,8 +22,15 @@ void loop() {
   
   sensorVal = analogRead(tempPin);
   delayTime = sensorVal;
-  Serial.println(sensorVal);
-
+//  Serial.println(sensorVal);
+  float voltage = sensorVal * 5.0;
+  voltage /= 1024.0;
+  // now print out the temperature
+  float temperatureC = (voltage - 0.5) * 100 ;  //converting from 10 mv per degree wit 500 mV offset
+                                               //to degrees ((voltage - 500mV) times 100)
+  Serial.print(temperatureC); Serial.println(" C");
+  
+  
   if (sensorVal < 150){
     digitalWrite(redLED2, LOW);
     digitalWrite(blueLED2, HIGH);
