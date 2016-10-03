@@ -2,13 +2,11 @@
 
 Servo myservoR;
 Servo myservoL;
-const int tempPin = A0;
 const int button = 2;
 const int redLed1 = 4;
 const int redLed2 = 7;
 const int blueLed1 = 8;
 const int blueLed2 = 12;
-int wiper = 0;
 
 int buttonState;           // the current reading from the input pin
 
