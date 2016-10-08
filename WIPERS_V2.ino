@@ -11,8 +11,7 @@ const int blueLed2 = 12;
 int buttonState;           // the current reading from the input pin
 
 int pos = 0;
-int tempVal;
-int servoVal;
+
 
 void setup() {
   pinMode(button, INPUT);
