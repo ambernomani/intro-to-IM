@@ -31,7 +31,7 @@ void createPattern(int sizeX, int sizeY){
   //check if the line is complete
   if (currentX >= width || currentX < 0){
       currentX = 0;
-      currentY = currentY + 50;
+      currentY = currentY + sizeY;
       println("currentY: ", currentY);
       y = shorten(y); // empty array
       y = shorten(y);
